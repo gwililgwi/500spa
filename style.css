@@ -1,0 +1,89 @@
+*{
+    margin : 0;
+    padding : 0;
+}
+body{
+    width : 100vw;
+    height : 100vh;
+}
+.full{
+    width : 100vw;
+    height : 100vh;
+}
+.first{
+    background : orange;
+    
+}
+.second{
+    background : rgb(111, 229, 200);
+    
+}
+.third{
+    background : rgb(23, 155, 221);
+    
+}
+.fourth{
+    background : rgb(210, 47, 255);
+    
+}
+.navigation{
+    position : absolute;
+    top : 40px;
+    left : 50%;
+    transform : translateX(-50%);
+    display : flex;
+    gap : 30px;
+}
+.nav{
+    background : rgba(255, 255, 255, 0.4);
+    color : white;
+    border-radius : 20px;
+    padding : 10px;
+}
+input[name='h']{
+    position : absolute;
+    visibility : hidden;
+}
+
+.slides{
+    width : 400%;
+    height : 100%;
+    display : flex;
+}
+.slide{
+    width : 25%;
+    transition : 1s;
+}
+.container{
+    overflow : hidden;
+}
+
+#h1:checked ~ .s1{
+    margin-left : 0;
+}
+#h2:checked ~ .s1{
+    margin-left : -25%;
+}
+#h3:checked ~ .s1{
+    margin-left : -50%;
+}
+#h4:checked ~ .s1{
+    margin-left : -75%;
+}
+
+.o1, .o2, .o3{
+    opacity : 0;
+    transition : 3s;
+}
+#h1:checked ~ .s1{
+    opacity : 1;
+}
+#h2:checked ~ .o1{
+    opacity : 1;
+}
+#h3:checked ~ .o2{
+    opacity : 1;
+}
+#h4:checked ~ .o3{
+    opacity : 1;
+}
